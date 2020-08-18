@@ -1,0 +1,12 @@
+diff --git a/dwm.c b/dwm.c
+index 66c6320..d2d958f 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -1519,6 +1519,7 @@ sendmon(Client *c, Monitor *m)
+ 	attachstack(c);
+ 	focus(NULL);
+ 	arrange(NULL);
++	focus(c);
+ }
+ 
+ void
