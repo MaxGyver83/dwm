@@ -55,6 +55,7 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "TTT",      bstack },
 };
 
 /* key definitions */
@@ -113,6 +114,7 @@ static Key keys[] = {
 	{ WIN|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[0]} },
 	{ WIN|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ WIN,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ WIN,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ WIN,                       XK_space,  setlayout,      {0} },
 	{ WIN|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ WIN,                       XK_0,      view,           {.ui = ~0 } },
