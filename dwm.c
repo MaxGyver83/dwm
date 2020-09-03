@@ -1989,6 +1989,8 @@ incrivgaps(const Arg *arg)
 void
 setlayout(const Arg *arg)
 {
+	if (selmon->lt[selmon->sellt] == (Layout *)arg->v)
+		arg = NULL;
 	if (!arg || !arg->v || arg->v != selmon->lt[selmon->sellt])
 		selmon->sellt ^= 1;
 	if (arg && arg->v)
