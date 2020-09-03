@@ -81,7 +81,7 @@ static const char *scratchpadcmd[]  = { "alacritty", "--config-file", "/home/max
 
 static Key keys[] = {
 	/* modifier                  key        function        argument */
-	{ WIN,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ WIN,                       XK_v,      spawn,          {.v = dmenucmd } },
 	{ WIN|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ WIN,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } },
 	{ WIN|ShiftMask,             XK_b,      togglebar,      {0} },
@@ -115,7 +115,7 @@ static Key keys[] = {
 	{ WIN|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ WIN,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ WIN,                       XK_u,      setlayout,      {.v = &layouts[3]} },
-	{ WIN,                       XK_o,      setlayout,      {.v = &layouts[4]} },
+	{ WIN,                       XK_d,      setlayout,      {.v = &layouts[4]} },
 	{ WIN,                       XK_space,  setlayout,      {0} },
 	{ WIN|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ WIN,                       XK_0,      view,           {.ui = ~0 } },
