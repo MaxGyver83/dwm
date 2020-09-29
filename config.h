@@ -33,6 +33,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4" };
+#include "shiftview.c"
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -129,6 +130,9 @@ static Key keys[] = {
 	{ WIN,                       XK_Right,  focusmon,       {.i = +1 } },
 	{ WIN|ShiftMask,             XK_Left,   tagmon,         {.i = -1 } },
 	{ WIN|ShiftMask,             XK_Right,  tagmon,         {.i = +1 } },
+
+	{ WIN,                      XK_comma,   shiftview,      { .i = +1 } },
+	{ WIN,                      XK_x,       shiftview,      { .i = -1 } },
 
 	TAGKEYS(                     XK_1,                      0)
 	TAGKEYS(                     XK_2,                      1)
