@@ -76,15 +76,15 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "alacritty", "--config-file", "/home/max/.config/alacritty/alacritty_dwm.yml", "-e", "fish", NULL };
+/* static const char *termcmd[]  = { "alacritty", "--config-file", "/lhome/schimax/.config/alacritty/alacritty_dwm.yml", "-e", "fish", NULL }; */
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[]  = { "alacritty", "--config-file", "/home/max/.config/alacritty/alacritty_dwm_scratchpad.yml", "-t", scratchpadname, "-e", "byobu", NULL };
+/* static const char *scratchpadcmd[]  = { "alacritty", "--config-file", "/lhome/schimax/.config/alacritty/alacritty_dwm_scratchpad.yml", "-t", scratchpadname, "-e", "byobu", NULL }; */
 
 static Key keys[] = {
 	/* modifier                  key        function        argument */
 	{ WIN,                       XK_l,      spawn,          {.v = dmenucmd } },
-	{ WIN|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ WIN,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } },
+	{ WIN|ShiftMask,             XK_Return, spawn,          SHCMD("~/install/alacritty-0.6 --config-file ~/.config/alacritty/alacritty_dwm_0.6.yml -e fish") },
+	/* { WIN,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } }, */
 	{ WIN|ShiftMask,             XK_b,      togglebar,      {0} },
 
 	{ WIN,                       XK_o,      focusstack,     {.i = -1 } },
@@ -150,7 +150,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,           Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,           Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,           Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,           Button2,        spawn,          {.v = termcmd } },
+	{ ClkStatusText,        0,           Button2,        spawn,          SHCMD("~/install/alacritty-0.6 --config-file ~/.config/alacritty/alacritty_dwm_0.6.yml -e fish") },
 	{ ClkClientWin,         WIN,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         WIN,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         WIN,         Button3,        resizemouse,    {0} },
