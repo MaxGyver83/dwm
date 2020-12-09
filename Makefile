@@ -23,6 +23,7 @@ config.h:
 	cp config.def.h $@
 
 dwm: ${OBJ}
+	#sed -i 's/home\/max/lhome\/schimax/g' config.h
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
