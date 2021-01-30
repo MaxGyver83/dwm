@@ -154,7 +154,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,           Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,           Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,           Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,           Button1,        spawn,          SHCMD("alacritty -d 82 9 -t Calendar -e bash -c 'ncal -bwM3 && printf \"Press Enter for closing \" && read'") },
+	{ ClkStatusText,        0,           Button1,        spawn,          SHCMD("~/bin/calendar.bash") },
 	{ ClkStatusText,        0,           Button2,        spawn,          SHCMD("~/install/alacritty-0.6 --config-file ~/.config/alacritty/alacritty_dwm_0.6.yml -e fish") },
 	{ ClkClientWin,         WIN,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         WIN,         Button2,        togglefloating, {0} },
