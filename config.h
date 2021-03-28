@@ -49,6 +49,7 @@ static const Rule rules[] = {
 	{ "Alacritty",           NULL,       "Calendar",   0,            1,            1,           -1 },
 	{ "Alacritty",           NULL,       "Cheatsheet", 0,            1,            1,           -1 },
 	{ "Alacritty",           NULL,       "Symbols",    0,            1,            1,           -1 },
+	{ "Alacritty",           NULL,       "Power menu", 0,            1,            1,           -1 },
 	/* { "VirtualBox Machine",  NULL,       NULL,       1 << 2,       0,           -1 }, */
 };
 
