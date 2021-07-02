@@ -17,8 +17,8 @@ static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows sel
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
-/* static const char *fonts[]          = { "monospace:size=14" }; */
-static const char *fonts[]          = { "terminus:size=14" };
+static const char *fonts[]          = { "monospace:size=14" };
+/* static const char *fonts[]          = { "terminus:size=14" }; */
 static const char dmenufont[]       = "monospace:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -53,6 +53,7 @@ static const Rule rules[] = {
 	{ "Alacritty",           NULL,       "Screenshot menu",   0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Screen menu",       0,            1,           1,           -1 },
 	{ "Firefox",             NULL,       "Picture-in-Picture",0,            0,           1,           -1 },
+	{ "st-256color",         NULL,       "vim",               0,            0,           1,           -1 },
 	/* { "VirtualBox Machine",  NULL,       NULL,       1 << 2,       0,           -1 }, */
 };
 
