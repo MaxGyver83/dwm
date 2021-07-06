@@ -37,15 +37,16 @@ static const char *tags[] = { "term", "web", "other" };
 #include "shiftview.c"
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
+	/* xprop | grep '^WM_NAME\|^WM_CLASS'
 	 *	WM_NAME(STRING) = title
+	 *	WM_CLASS(STRING) = instance, class
 	 */
 	/* class                 instance    title                tags mask     iscentered   isfloating   monitor */
 	{ "Gimp",                NULL,       NULL,                0,            0,           1,           -1 },
 	{ "Qalculate",           NULL,       NULL,                0,            1,           1,           -1 },
 	{ "Pavucontrol",         NULL,       NULL,                0,            0,           1,           -1 },
 	{ "Firefox",             NULL,       NULL,                1 << 1,       0,           0,           -1 },
+	{ "Microsoft Teams - Preview", NULL, NULL,                1 << 2,       0,           0,           -1 },
 	{ "Alacritty",           NULL,       "Calendar",          0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Cheatsheet",        0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Symbols",           0,            1,           1,           -1 },
