@@ -37,15 +37,16 @@ static const char *tags[] = { "term", "web", "other" };
 #include "shiftview.c"
 
 static const Rule rules[] = {
-	/* xprop | grep '^WM_NAME\|^WM_CLASS'
-	 *	WM_NAME(STRING) = title
+	/* xprop | grep '^WM_CLASS\|^WM_NAME'
 	 *	WM_CLASS(STRING) = instance, class
+	 *	WM_NAME(STRING) = title
 	 */
 	/* class                 instance    title                tags mask     iscentered   isfloating   monitor */
 	{ "Gimp",                NULL,       NULL,                0,            0,           1,           -1 },
 	{ "Qalculate",           NULL,       NULL,                0,            1,           1,           -1 },
 	{ "Pavucontrol",         NULL,       NULL,                0,            0,           1,           -1 },
 	{ "Firefox",             NULL,       NULL,                1 << 1,       0,           0,           -1 },
+	{ "Thunderbird",         NULL,       NULL,                1 << 2,       0,           0,           -1 },
 	{ "Microsoft Teams - Preview", NULL, NULL,                1 << 2,       0,           0,           -1 },
 	{ "Alacritty",           NULL,       "Calendar",          0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Cheatsheet",        0,            1,           1,           -1 },
@@ -54,6 +55,7 @@ static const Rule rules[] = {
 	{ "Alacritty",           NULL,       "Screenshot menu",   0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Screen menu",       0,            1,           1,           -1 },
 	{ "Firefox",             NULL,       "Picture-in-Picture",0,            0,           1,           -1 },
+	{ "Firefox",             NULL,       "Bild-im-Bild",      0,            0,           1,           -1 },
 	{ "st-256color",         NULL,       "vim",               0,            0,           1,           -1 },
 	/* { "VirtualBox Machine",  NULL,       NULL,       1 << 2,       0,           -1 }, */
 };
