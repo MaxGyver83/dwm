@@ -298,7 +298,6 @@ static const char autostartblocksh[] = "autostart_blocking.sh";
 static const char autostartsh[] = "autostart.sh";
 static const char broken[] = "broken";
 static const char dwmdir[] = "dwm";
-static const char localshare[] = ".local/share";
 static char stext[256];
 static int screen;
 static int sw, sh;           /* X display screen geometry width, height */
@@ -1739,7 +1738,6 @@ runautostart(void)
 {
 	char *pathpfx;
 	char *path;
-	char *xdgdatahome;
 	char *home;
 	struct stat sb;
 
@@ -1747,27 +1745,13 @@ runautostart(void)
 		/* this is almost impossible */
 		return;
 
-	/* if $XDG_DATA_HOME is set and not empty, use $XDG_DATA_HOME/dwm,
-	 * otherwise use ~/.local/share/dwm as autostart script directory
-	 */
-	xdgdatahome = getenv("XDG_DATA_HOME");
-	if (xdgdatahome != NULL && *xdgdatahome != '\0') {
-		/* space for path segments, separators and nul */
-		pathpfx = ecalloc(1, strlen(xdgdatahome) + strlen(dwmdir) + 2);
+	/* use ~/.config/dwm/ as autostart script directory */
+	/* space for path segments, separators and nul */
+	pathpfx = ecalloc(1, strlen(home) + 7 + strlen(dwmdir) + 3);
 
-		if (sprintf(pathpfx, "%s/%s", xdgdatahome, dwmdir) <= 0) {
-			free(pathpfx);
-			return;
-		}
-	} else {
-		/* space for path segments, separators and nul */
-		pathpfx = ecalloc(1, strlen(home) + strlen(localshare)
-		                     + strlen(dwmdir) + 3);
-
-		if (sprintf(pathpfx, "%s/%s/%s", home, localshare, dwmdir) < 0) {
-			free(pathpfx);
-			return;
-		}
+	if (sprintf(pathpfx, "%s/.config/%s", home, dwmdir) < 0) {
+		free(pathpfx);
+		return;
 	}
 
 	/* check if the autostart script directory exists */
@@ -1780,7 +1764,7 @@ runautostart(void)
 			free(pathpfx);
 			return;
 		}
-   pathpfx = pathpfx_new;
+		pathpfx = pathpfx_new;
 
 		if (sprintf(pathpfx, "%s/.%s", home, dwmdir) <= 0) {
 			free(pathpfx);
@@ -2216,7 +2200,7 @@ swapfocus(const Arg *arg)
 {
 	if (!selmon->sel)
 		return;
-	if(selmon->pertag->prevclient[selmon->pertag->curtag] != NULL 
+	if(selmon->pertag->prevclient[selmon->pertag->curtag] != NULL
 			&& ISVISIBLE(selmon->pertag->prevclient[selmon->pertag->curtag])){
 		focus(selmon->pertag->prevclient[selmon->pertag->curtag]);
 		restack(selmon->pertag->prevclient[selmon->pertag->curtag]->mon);
