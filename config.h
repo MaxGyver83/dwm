@@ -17,9 +17,16 @@ static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows sel
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
-static const char *fonts[]          = { "monospace:size=14" };
+/* static const char *fonts[]          = { "monospace:size=14" }; */
+/* static const char *fonts[]          = { "Unifont:size=14" }; */
+/* static const char *fonts[]          = { "Hack:size=14" }; */
+static const char *fonts[]          = { "Noto Sans Mono:size=16" };
+/* static const char *fonts[]          = { "Code2000:size=14" }; */
+/* static const char *fonts[]          = { "Source Code Pro:size=14" }; */
+/* static const char *fonts[]          = { "Unifont:size=14" }; */
+/* static const char *fonts[]          = { "Linux Libertine:size=14" }; */
 /* static const char *fonts[]          = { "terminus:size=14" }; */
-static const char dmenufont[]       = "monospace:size=14";
+static const char dmenufont[]       = "monospace:size=16";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -33,7 +40,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "term", "web", "other" };
+static const char *tags[] = { "term", "web", "misc" };
 #include "shiftview.c"
 
 static const Rule rules[] = {
@@ -55,6 +62,7 @@ static const Rule rules[] = {
 	{ "Alacritty",           NULL,       "Power menu",        0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Screenshot menu",   0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Screen menu",       0,            1,           1,           -1 },
+	{ "Alacritty",           NULL,       "Brightness menu",   0,            1,           1,           -1 },
 	{ "Firefox",             NULL,       "Picture-in-Picture",0,            0,           1,           -1 },
 	{ "Firefox",             NULL,       "Bild-im-Bild",      0,            0,           1,           -1 },
 	{ "st-256color",         NULL,       "vim",               0,            0,           1,           -1 },
@@ -99,7 +107,7 @@ static const char scratchpadname[] = "scratchpad";
 static Key keys[] = {
 	/* modifier                  key        function        argument */
 	{ WIN,                       XK_l,      spawn,          {.v = dmenucmd } },
-	{ WIN|ShiftMask,             XK_Return, spawn,          SHCMD("~/install/alacritty -e fish") },
+	{ WIN|ShiftMask,             XK_Return, spawn,          SHCMD("/usr/local/bin/st -e fish") },
 	/* { WIN,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } }, */
 	{ WIN|ShiftMask,             XK_b,      togglebar,      {0} },
 
@@ -168,7 +176,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,           Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,           Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,           Button1,        spawn,          SHCMD("~/bin/calendar.bash") },
-	{ ClkStatusText,        0,           Button2,        spawn,          SHCMD("~/install/alacritty -e fish") },
+	{ ClkStatusText,        0,           Button2,        spawn,          SHCMD("/usr/local/bin/st -e fish") },
 	{ ClkClientWin,         WIN,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         WIN,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         WIN,         Button3,        resizemouse,    {0} },
