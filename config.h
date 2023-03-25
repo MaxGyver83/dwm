@@ -34,9 +34,10 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char col_red[]         = "#ff0000";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_red   },
+	/*                   fg         bg         border   */
+	[SchemeNorm]     = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel]      = { col_gray4, col_cyan,  col_red   },
+	[SchemeInactive] = { col_gray4, col_gray2, col_gray2 },
 };
 
 /* tagging */
@@ -66,6 +67,8 @@ static const Rule rules[] = {
 	{ "Firefox",             NULL,       "Picture-in-Picture",0,            0,           1,           -1 },
 	{ "Firefox",             NULL,       "Bild-im-Bild",      0,            0,           1,           -1 },
 	{ "st-256color",         NULL,       "vim",               0,            0,           1,           -1 },
+	{ "jetbrains-studio",    NULL,       "splash",            0,            0,           1,           -1 },
+	{ "jetbrains-studio",    NULL,       "Android Studio Setup Wizard",  0, 0,           1,           -1 },
 	/* { "VirtualBox Machine",  NULL,       NULL,       1 << 2,       0,           -1 }, */
 };
 
