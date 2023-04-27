@@ -109,7 +109,7 @@ static const char scratchpadname[] = "scratchpad";
 
 static Key keys[] = {
 	/* modifier                  key        function        argument */
-	{ WIN,                       XK_l,      spawn,          {.v = dmenucmd } },
+	{ WIN,                       XK_period, spawn,          {.v = dmenucmd } },
 	{ WIN|ShiftMask,             XK_Return, spawn,          SHCMD("/usr/local/bin/st -e fish") },
 	/* { WIN,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } }, */
 	{ WIN|ShiftMask,             XK_b,      togglebar,      {0} },
@@ -127,8 +127,8 @@ static Key keys[] = {
 	{ WIN|ShiftMask,             XK_i,      incnmaster,     {.i = +1 } },
 	{ WIN|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
 
-	{ WIN,                       XK_period, setmfact,       {.f = -0.05} },
-	{ WIN,                       XK_u,      setmfact,       {.f = +0.05} },
+	{ WIN,                       XK_l,      setmfact,       {.f = -0.05} },
+	{ WIN,                       XK_h,      setmfact,       {.f = +0.05} },
 
 	{ WIN|ShiftMask,             XK_period, incrgaps,       {.i = -1 } },
 	{ WIN|ShiftMask,             XK_u,      incrgaps,       {.i = +1 } },
@@ -144,7 +144,7 @@ static Key keys[] = {
 	{ WIN|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[0]} },
 	{ WIN|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ WIN,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ WIN,                       XK_h,      setlayout,      {.v = &layouts[3]} },
+	{ WIN,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ WIN,                       XK_d,      setlayout,      {.v = &layouts[4]} },
 	{ WIN,                       XK_space,  setlayout,      {0} },
 	{ WIN|ShiftMask,             XK_space,  togglefloating, {0} },
