@@ -20,13 +20,13 @@ static const int showsystray        = 1;     /* 0 means no systray */
 /* static const char *fonts[]          = { "monospace:size=14" }; */
 /* static const char *fonts[]          = { "Unifont:size=14" }; */
 /* static const char *fonts[]          = { "Hack:size=14" }; */
-static const char *fonts[]          = { "Noto Sans Mono:size=16" };
+static const char *fonts[]          = { "Noto Sans Mono:size=14" };
 /* static const char *fonts[]          = { "Code2000:size=14" }; */
 /* static const char *fonts[]          = { "Source Code Pro:size=14" }; */
 /* static const char *fonts[]          = { "Unifont:size=14" }; */
 /* static const char *fonts[]          = { "Linux Libertine:size=14" }; */
 /* static const char *fonts[]          = { "terminus:size=14" }; */
-static const char dmenufont[]       = "monospace:size=16";
+static const char dmenufont[]       = "monospace:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
