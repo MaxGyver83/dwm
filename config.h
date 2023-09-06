@@ -59,6 +59,7 @@ static const Rule rules[] = {
 	{ "Microsoft Teams - Preview", NULL, NULL,                1 << 2,       0,           0,           -1 },
 	{ "Alacritty",           NULL,       "Calendar",          0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Cheatsheet",        0,            1,           1,           -1 },
+	{ "Alacritty",           NULL,       "Cheatsheet menu",   0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Symbols",           0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Power menu",        0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Screenshot menu",   0,            1,           1,           -1 },
@@ -67,6 +68,10 @@ static const Rule rules[] = {
 	{ "Firefox",             NULL,       "Picture-in-Picture",0,            0,           1,           -1 },
 	{ "Firefox",             NULL,       "Bild-im-Bild",      0,            0,           1,           -1 },
 	{ "st-256color",         NULL,       "vim",               0,            0,           1,           -1 },
+	{ "Xpra",                NULL,       NULL,                0,            0,           1,           -1 },
+	{ "Gnome-calculator",    NULL,       NULL,                0,            0,           1,           -1 },
+	{ "feh"             ,    NULL,       NULL,                0,            0,           1,           -1 },
+	{ "Evolution-alarm-notify", NULL,    NULL,                0,            0,           1,           -1 },
 	{ "jetbrains-studio",    NULL,       "splash",            0,            0,           1,           -1 },
 	{ "jetbrains-studio",    NULL,       "Android Studio Setup Wizard",  0, 0,           1,           -1 },
 	/* { "VirtualBox Machine",  NULL,       NULL,       1 << 2,       0,           -1 }, */
