@@ -41,7 +41,12 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
+#ifdef OFFICE
+static const char *tags[] = { "local", "remote", "web", "teams" };
+#else
 static const char *tags[] = { "term", "web", "misc" };
+#endif
+
 #include "shiftview.c"
 
 static const Rule rules[] = {
@@ -53,10 +58,16 @@ static const Rule rules[] = {
 	{ "Gimp",                NULL,       NULL,                0,            0,           1,           -1 },
 	{ "Qalculate",           NULL,       NULL,                0,            1,           1,           -1 },
 	{ "Pavucontrol",         NULL,       NULL,                0,            0,           1,           -1 },
+#ifdef OFFICE
+	{ "st-256color",         NULL,       "ssh",               1 << 1,       0,           0,           -1 },
+	{ "Firefox",             NULL,       NULL,                1 << 2,       0,           0,           -1 },
+	{ "firefox",             NULL,       NULL,                1 << 2,       0,           0,           -1 },
+	{ "Microsoft Teams - Preview", NULL, NULL,                1 << 3,       0,           0,           -1 },
+#else
 	{ "Firefox",             NULL,       NULL,                1 << 1,       0,           0,           -1 },
 	{ "firefox",             NULL,       NULL,                1 << 1,       0,           0,           -1 },
 	{ "Thunderbird",         NULL,       NULL,                1 << 2,       0,           0,           -1 },
-	{ "Microsoft Teams - Preview", NULL, NULL,                1 << 2,       0,           0,           -1 },
+#endif
 	{ "Alacritty",           NULL,       "Calendar",          0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Cheatsheet",        0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Cheatsheet menu",   0,            1,           1,           -1 },

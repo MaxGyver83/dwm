@@ -6,6 +6,10 @@ include config.mk
 SRC = drw.c dwm.c util.c
 OBJ = ${SRC:.c=.o}
 
+ifneq (,$(findstring sc,$(USER)))
+	CFLAGS += -DOFFICE
+endif
+
 all: options dwm
 
 options:
