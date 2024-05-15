@@ -67,6 +67,8 @@ static const Rule rules[] = {
 	{ "Firefox",             NULL,       NULL,                1 << 1,       0,           0,           -1 },
 	{ "firefox",             NULL,       NULL,                1 << 1,       0,           0,           -1 },
 	{ "Thunderbird",         NULL,       NULL,                1 << 2,       0,           0,           -1 },
+	{ "thunderbird",         NULL,       NULL,                1 << 2,       0,           0,           -1 },
+	{ "Microsoft Teams - Preview", NULL, NULL,                1 << 2,       0,           0,           -1 },
 #endif
 	{ "Alacritty",           NULL,       "Calendar",          0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Cheatsheet",        0,            1,           1,           -1 },
@@ -76,6 +78,7 @@ static const Rule rules[] = {
 	{ "Alacritty",           NULL,       "Screenshot menu",   0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Screen menu",       0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Brightness menu",   0,            1,           1,           -1 },
+	{ "Completion",          NULL,       "Completion",        0,            1,           1,           -1 },
 	{ "Firefox",             NULL,       "Picture-in-Picture",0,            0,           1,           -1 },
 	{ "Firefox",             NULL,       "Bild-im-Bild",      0,            0,           1,           -1 },
 	{ "st-256color",         NULL,       "vim",               0,            0,           1,           -1 },
