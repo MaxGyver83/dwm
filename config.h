@@ -87,6 +87,7 @@ static const Rule rules[] = {
 	{ "feh",                 NULL,       NULL,                0,            0,           1,           -1 },
 	{ "XClock",              NULL,       NULL,                0,            0,           1,           -1 },
 	{ "Evolution-alarm-notify", NULL,    NULL,                0,            0,           1,           -1 },
+	{ "jetbrains-studio",    NULL,       NULL,                1 << 2,       0,           1,           -1 },
 	{ "jetbrains-studio",    NULL,       "splash",            0,            0,           1,           -1 },
 	{ "jetbrains-studio",    NULL,       "Android Studio Setup Wizard",  0, 0,           1,           -1 },
 	/* { "VirtualBox Machine",  NULL,       NULL,       1 << 2,       0,           -1 }, */
