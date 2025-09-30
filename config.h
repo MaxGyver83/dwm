@@ -131,7 +131,7 @@ static const char scratchpadname[] = "scratchpad";
 static Key keys[] = {
 	/* modifier                  key        function        argument */
 	{ WIN,                       XK_period, spawn,          {.v = dmenucmd } },
-	{ WIN|ShiftMask,             XK_Return, spawn,          SHCMD("/usr/local/bin/st -e fish") },
+	{ WIN|ShiftMask,             XK_Return, spawn,          SHCMD("/usr/local/bin/st") },
 	/* { WIN,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } }, */
 	{ WIN|ShiftMask,             XK_b,      togglebar,      {0} },
 
