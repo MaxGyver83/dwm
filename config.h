@@ -107,6 +107,7 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
 	{ "TTT",      bstack },
 	{ "[D]",      deck },
+	{ "III",      horizontal },
 };
 
 /* key definitions */
@@ -169,6 +170,7 @@ static Key keys[] = {
 	{ WIN,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ WIN,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ WIN,                       XK_d,      setlayout,      {.v = &layouts[4]} },
+	{ WIN,                       XK_c,      setlayout,      {.v = &layouts[5]} },
 	{ WIN,                       XK_space,  setlayout,      {0} },
 	{ WIN|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ WIN,                       XK_0,      view,           {.ui = ~0 } },
