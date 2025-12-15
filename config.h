@@ -55,7 +55,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                 instance    title                tags mask     iscentered   isfloating   monitor */
-	{ "Gimp",                NULL,       NULL,                0,            0,           1,           -1 },
+	{ "Gimp",                NULL,       NULL,                0,            0,           0,           -1 },
+	{ "Gimp",                NULL,       "Change Background Color",  0,     0,           1,           -1 },
 	{ "Qalculate",           NULL,       NULL,                0,            1,           1,           -1 },
 	{ "Pavucontrol",         NULL,       NULL,                0,            0,           1,           -1 },
 #ifdef OFFICE
@@ -86,6 +87,7 @@ static const Rule rules[] = {
 	{ NULL,                  NULL,       "Tiny Tic Tac Toe",  0,            0,           1,           -1 },
 	{ NULL,                 NULL,"Catch Me If You Can (Video)",1 << 2,      0,           1,           -1 },
 	{ NULL,                  NULL,       "Catch Me If You Can",0,           0,           1,           -1 },
+	{ "RocketGame",          NULL,       NULL,                0,            0,           1,           -1 },
 	{ "Xpra",                NULL,       NULL,                0,            0,           1,           -1 },
 	{ "Gnome-calculator",    NULL,       NULL,                0,            0,           1,           -1 },
 	{ "feh",                 NULL,       NULL,                0,            0,           1,           -1 },
