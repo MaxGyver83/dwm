@@ -71,6 +71,11 @@ static const Rule rules[] = {
 	{ "Thunderbird",         NULL,       NULL,                1 << 2,       0,           0,           -1 },
 	{ "thunderbird",         NULL,       NULL,                1 << 2,       0,           0,           -1 },
 	{ "Microsoft Teams - Preview", NULL, NULL,                1 << 2,       0,           0,           -1 },
+	{ "Full",                "Full",     "Full",              0,            0,           1,           -1 },
+	{ "Fyne",                "Fyne",     "Fyne",              0,            0,           1,           -1 },
+	{ NULL,                  NULL,       "App",               0,            0,           1,           -1 },
+	{ "Test",                "Test",     "Test",              0,            0,           1,           -1 },
+	{ "slow render",         "slow render", "slow render",    0,            0,           1,           -1 },
 #endif
 	{ "MEGAsync",            "megasync", NULL,                0,            0,           1,           -1 },
 	{ "Alacritty",           NULL,       "Calendar",          0,            1,           1,           -1 },
