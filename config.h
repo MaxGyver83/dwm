@@ -72,6 +72,7 @@ static const Rule rules[] = {
 	{ "thunderbird",         NULL,       NULL,                1 << 2,       0,           0,           -1 },
 	{ "Microsoft Teams - Preview", NULL, NULL,                1 << 2,       0,           0,           -1 },
 #endif
+	{ "MEGAsync",            "megasync", NULL,                0,            0,           1,           -1 },
 	{ "Alacritty",           NULL,       "Calendar",          0,            1,           1,           -1 },
 	{ "st-256color",         NULL,       "Cheatsheet",        0,            1,           1,           -1 },
 	{ "Alacritty",           NULL,       "Cheatsheet",        0,            1,           1,           -1 },
