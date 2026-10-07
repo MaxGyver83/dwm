@@ -208,6 +208,7 @@ static Button buttons[] = {
 	{ ClkWinTitle,          0,           Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,           Button1,        spawn,          SHCMD("~/bin/calendar.bash") },
 	{ ClkStatusText,        0,           Button2,        spawn,          SHCMD("/usr/local/bin/st") },
+	{ ClkStatusText,        0,           Button3,        spawn,          SHCMD("/home/max/bin/rescue-menu") },
 	{ ClkClientWin,         WIN,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         WIN,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         WIN,         Button3,        resizemouse,    {0} },
