@@ -132,13 +132,13 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-l", "10", NULL };
 /* static const char *termcmd[]  = { "alacritty", "--config-file", "/lhome/schimax/.config/alacritty/alacritty_dwm.yml", "-e", "fish", NULL }; */
 static const char scratchpadname[] = "scratchpad";
-/* static const char *scratchpadcmd[]  = { "alacritty", "--config-file", "/lhome/schimax/.config/alacritty/alacritty_dwm_scratchpad.yml", "-t", scratchpadname, "-e", "byobu", NULL }; */
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 static Key keys[] = {
 	/* modifier                  key        function        argument */
 	{ WIN,                       XK_period, spawn,          {.v = dmenucmd } },
 	{ WIN|ShiftMask,             XK_Return, spawn,          SHCMD("/usr/local/bin/st") },
-	/* { WIN,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } }, */
+	{ WIN,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } },
 	{ WIN|ShiftMask,             XK_b,      togglebar,      {0} },
 
 	{ WIN,                       XK_o,      focusstack,     {.i = -1 } },
